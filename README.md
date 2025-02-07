@@ -4,6 +4,7 @@
 
 - Website: [https://www.baserock.ai](http://baserock.ai/)
 
+# JAVA PLUGIN
 
 ## Libraries required by BaseRock Plugin
 
@@ -591,4 +592,187 @@ In case of a message like `Unable to update build.gradle.kts. Please update with
 - Either it is missing in the package.
 - It is renamed.
 To resolve it please follow along the doc to add these dependencies to your build file. After a successful sync, the plugin will start generating tests for your repository. 
+
+# Guide for Python Projects
+
+## Requirements
+
+To ensure the proper functioning of the BaseRock AI VS Code extension, please ensure the following requirements are met:
+
+* Python >= 3.8: Ensure you have Python version 3.8 or higher installed.
+
+* VS Code Python Extension: Install the official Python extension by Microsoft to enable VS Code to detect Python projects.
+
+* Virtual Environment (Recommended): It is highly recommended to set up a virtual environment and install project dependencies within it.
+
+If you encounter any errors while setting up the environment, follow these steps:
+
+## Ensure Python is Installed and Accessible
+
+* Run `python3 --version` to verify the installation.
+* Ensure Python is added to the system PATH.
+
+## Check Virtual Environment Setup
+
+* Run `python3 -m venv .venv` to create a virtual environment.
+* Activate the virtual environment using:
+    * **Windows**: `.venv\Scripts\activate`
+    * **Mac/Linux**: `source .venv/bin/activate`
+* Install dependencies: `pip install -r requirements.txt`
+
+## Review the Output Panel in VS Code
+
+* Open the **Output** panel (`View -> Output` in VS Code) to check error messages.
+
+## Restart VS Code and Retry Setup
+
+* Close and reopen VS Code after making changes.
+* Retry running the environment setup.
+
+## Additional Help
+
+If you continue to experience issues after following these steps, please:
+
+1. Ensure all system requirements are met
+2. Check your Python version compatibility
+3. Verify all required dependencies are installed
+4. Contact support with detailed error messages if problems persist
+
+## Common Issues and Solutions
+
+### Python Not Found
+```bash
+# Add Python to PATH (Windows)
+# Add to Environment Variables -> System Variables -> Path:
+C:\Users\YourUsername\AppData\Local\Programs\Python\Python3x\
+C:\Users\YourUsername\AppData\Local\Programs\Python\Python3x\Scripts\
+
+# Add Python to PATH (MacOS)
+# zsh - default shell for macOS Catalina and later
+echo 'export PATH="/usr/local/bin:/usr/local/opt/Python3x/libexec/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+### Virtual Environment Activation Fails
+```bash
+# Windows PowerShell may need to run:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Try alternative activation on Windows:
+.\.venv\Scripts\activate.bat
+```
+
+Remember to replace `Python3x` with your specific Python version number.
+
+# Guide for JavaScript & TypeScript Projects
+
+## **Prerequisites**
+
+Before using the BaseRock AI VS Code extension, ensure the following requirements are met:
+
+### **1. Testing Framework Configuration**
+- Your project must include a **testing framework** (e.g., Jest, Mocha) and an **assertion library** (e.g., Chai, Expect) as **dev dependencies** in `package.json`.
+- Example (`package.json`):
+  ```json
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "chai": "^4.3.0"
+  }
+  ```
+
+### **2. Test File Configuration**
+- Ensure your test files are located in a directory that matches the test regex pattern set in your configuration files.
+- Example regex for Jest:
+  ```json
+  {
+    "testMatch": ["**/__tests__/**/*.[jt]s?(x)"]
+  }
+  ```
+- If test files are not detected, check if they conform to your **configured pattern**. You can also update the location of your test file in BaseRock Settings
+
+### **3. Framework-Specific Requirements**
+Depending on your project type, install the required testing utilities:
+- **React**: Ensure `@testing-library/react` is installed.
+  ```json
+  "devDependencies": {
+    "@testing-library/react": "^13.4.0"
+  }
+  ```
+- **Angular**: Ensure `@angular/core/testing` is listed in your dependencies.
+  ```json
+  "devDependencies": {
+    "@angular/core": "^15.0.0"
+  }
+  ```
+
+### **4. Install Dependencies**
+- Run the appropriate package manager command based on your project setup:
+  ```sh
+  # Using npm
+  npm install  
+
+  # Using yarn
+  yarn install
+  ```
+
+## **Troubleshooting**
+
+### **Unable to Sign In?**
+
+If you are experiencing issues signing in, follow these steps:
+
+1. When the **Sign In** prompt appears at the bottom right of VS Code, click **Proceed**.
+2. This will open your default browser, where you can select a preferred sign-in method.
+3. For the best experience, use **Google Chrome** or **Mozilla Firefox**.
+- If a different browser opens automatically, **copy the URL** and paste it into Chrome or Firefox to proceed.
+
+### **Test Generation Issues**
+**1. Verify Testing Framework Installation**
+- Run:
+  ```sh
+  npx jest --version  # For Jest  
+  npx mocha --version # For Mocha  
+  ```
+- If not found, install one.
+
+**2. Verify test file location**
+- Ensure test files are in a recognized test folder.
+- Check your test file regex configuration.
+
+**3. Ensure VS Code has access to the workspace**
+- If you see permission errors, restart VS Code and check workspace settings.
+
+### **Tests Execution Issues**
+**1. Confirm that the test runner is working**
+- Try running tests manually:
+  ```sh
+  npm test path/to/testfile.js
+  ```
+- If tests fail, check for missing dependencies.
+
+**2. Check `testCommand` configuration**
+- Ensure that the test command mentioned in Output > BaseRock AI is correct. If not, update it in BaseRock settings.
+
+### **BaseRock Settings**
+
+- Ensure BaseRock settings has the correct configurations required to generate & execute the tests.
+- BaseRock settings can be accessed by clicking on the baserock logo on the sidebar (left-most panel) and the clicking on settings icon on the top right.
+- Following images can be used as a guide to save baserock settings.
+- ![BaseRock Sidebar](images/vscode/baserock_sidebar.png)
+- ![BaseRock Settings](images/vscode/baserock_settings.png)
+- ![BaseRock Settings Saved](images/vscode/baserock_settings_saved.png)
+
+### **CodeLens Implementation**
+**1. Ensure file type is supported**
+- CodeLens appears only for **JavaScript/TypeScript test files** (`.js`, `.ts`, `.jsx`, `.tsx`, `.vue`).
+
+**2. Check VS Code settings**
+- Ensure `editor.codeLens` is enabled in your settings (`Ctrl + ,` → Search `CodeLens`).
+
+---
+
+### **Support**
+For additional assistance, please contact our support team:
+- Email: support@baserock.ai
+
 
