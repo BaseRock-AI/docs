@@ -4,7 +4,7 @@
 
 - Website: [https://www.baserock.ai](http://baserock.ai/)
 
-# JAVA PLUGIN
+# Guide for Java Projects
 
 ## Libraries required by BaseRock Plugin
 
