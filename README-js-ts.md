@@ -51,6 +51,15 @@ Depending on your project type, install the required testing utilities:
 
 ## **Troubleshooting**
 
+### **Unable to Sign In?**
+
+If you are experiencing issues signing in, follow these steps:
+
+1. When the **Sign In** prompt appears at the bottom right of VS Code, click **Proceed**.
+2. This will open your default browser, where you can select a preferred sign-in method.
+3. For the best experience, use **Google Chrome** or **Mozilla Firefox**.
+- If a different browser opens automatically, **copy the URL** and paste it into Chrome or Firefox to proceed.
+
 ### **Test Generation Issues**
 **1. Verify Testing Framework Installation**
 - Run:
@@ -67,7 +76,7 @@ Depending on your project type, install the required testing utilities:
 **3. Ensure VS Code has access to the workspace**
 - If you see permission errors, restart VS Code and check workspace settings.
 
-### **Tests Are Not Executing**
+### **Tests Execution Issues**
 **1. Confirm that the test runner is working**
 - Try running tests manually:
   ```sh
@@ -77,6 +86,15 @@ Depending on your project type, install the required testing utilities:
 
 **2. Check `testCommand` configuration**
 - Ensure that the test command mentioned in Output > BaseRock AI is correct. If not, update it in BaseRock settings.
+
+### **BaseRock Settings**
+
+- Ensure BaseRock settings has the correct configurations required to generate & execute the tests.
+- BaseRock settings can be accessed by clicking on the baserock logo on the sidebar (left-most panel) and the clicking on settings icon on the top right.
+- Following images can be used as a guide to save baserock settings.
+- ![BaseRock Sidebar](images/vscode/baserock_sidebar.png)
+- ![BaseRock Settings](images/vscode/baserock_settings.png)
+- ![BaseRock Settings Saved](images/vscode/baserock_settings_saved.png)
 
 ### **CodeLens Implementation**
 **1. Ensure file type is supported**
