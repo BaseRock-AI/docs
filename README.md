@@ -4,7 +4,7 @@
 
 - Website: [https://www.baserock.ai](http://baserock.ai/)
 
-# Guide for Java Projects
+# Guidelines for Java Projects
 
 ## Libraries required by BaseRock Plugin
 
@@ -593,7 +593,7 @@ In case of a message like `Unable to update build.gradle.kts. Please update with
 - It is renamed.
 To resolve it please follow along the doc to add these dependencies to your build file. After a successful sync, the plugin will start generating tests for your repository. 
 
-# Guide for Python Projects
+# Guidelines for Python Projects
 
 ## Requirements
 
@@ -664,7 +664,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 Remember to replace `Python3x` with your specific Python version number.
 
-# Guide for JavaScript & TypeScript Projects
+# Guidelines for JavaScript & TypeScript Projects
 
 ## **Prerequisites**
 
