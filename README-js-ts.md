@@ -103,6 +103,9 @@ If you are experiencing issues signing in, follow these steps:
 **2. Check VS Code settings**
 - Ensure `editor.codeLens` is enabled in your settings (`Ctrl + ,` → Search `CodeLens`).
 
+### **BaseRock with Cursor IDE**
+BaseRock plugin can be installed with cursor IDE. The minimum version for the support is `0.45.14`.
+
 ---
 
 ### **Support**
