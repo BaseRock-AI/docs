@@ -68,3 +68,21 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 Remember to replace `Python3x` with your specific Python version number.
+
+## Windows-Specific Python Setup
+
+Before running on Windows, follow these steps:
+
+1. Install the Python 3.13 interpreter from Microsoft Store:
+   * Visit [Python 3.13 in Microsoft Store](https://apps.microsoft.com/detail/9NRWMJP3717K)
+   * Click "Get" or "Install" to download and install Python 3.13
+
+2. Select the Python 3.13 interpreter in VS Code:
+   * Open VS Code
+   * Press `Ctrl+Shift+P` to open the command palette
+   * Type "Python: Select Interpreter" and select it
+   * Choose the Python 3.13 interpreter from the list
+
+3. Open a new terminal in VS Code to ensure it uses the selected Python interpreter
+
+This approach ensures you're using the Microsoft Store version of Python, which is properly integrated with Windows and easier to maintain.
