@@ -297,7 +297,7 @@ It brings substantial enhancements in terms of readability, expressiveness, comp
       <dependency>
          <groupId>org.hamcrest</groupId>
          <artifactId>hamcrest</artifactId>
-         <version>2.2</version>
+         <version>3.0</version>
          <scope>test</scope>
       </dependency>
   ```
@@ -305,7 +305,7 @@ It brings substantial enhancements in terms of readability, expressiveness, comp
 - Gradle
 
  ``` 
-       testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '2.2'
+       testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '3.0'
  ```
 
 ## Spring boot Test Library  
