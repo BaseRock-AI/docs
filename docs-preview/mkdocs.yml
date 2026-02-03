@@ -1,0 +1,8 @@
+site_name: BaseRock User Guide
+
+theme:
+  name: material
+
+nav:
+  - User Guide: BaseRock_User_Guide_claude.md
+
