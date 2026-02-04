@@ -1,5 +1,5 @@
 
-![Image 01](resources/images_userguide/img02-baserock_dep_archi.png)
+![Image 01](img01-BR_logo.png)
 
 # User Guide
 
@@ -30,7 +30,7 @@ BaseRock Agentic QA is an advanced AI-driven smart automation platform purpose-b
 
 ### Deployment Architecture
 
-![Image 02](resources/images_userguide/img02-baserock_dep_archi.png)
+![BaseRock Deployment Architecture](../../resources/images_userguide/img02-baserock_dep_archi.png)
 
 The BaseRock Agentic QA Platform is composed of two primary components — the BaseRock Control Plane and the BaseRock Agent.
 

@@ -4,5 +4,5 @@ theme:
   name: material
 
 nav:
-  - User Guide: BaseRock_User_Guide_claude.md
+  - User Guide: User_Guide_v1.2.md
 
