@@ -1,5 +1,5 @@
 
-![Image 01](resources/images_userguide/img02-baserock_dep_archi.png)
+![Image 01](resources/images_userguide/img01-BR_logo.png)
 
 # User Guide
 
@@ -102,7 +102,7 @@ For a newly created account, you can login using email using the following steps
 
 Open Control plane URL in your browser (https://app.baserock.ai in case of SaaS)
 
-![Image 03](docs/resources/images_userguide/image 03.png)
+![Image 03](resources/images_userguide/img03-signin_page.png)
 
 Use any of Github or Gitlab based via OAuth in your browser
 
@@ -110,29 +110,29 @@ Or you can use name and email address to login via email.
 
 Enter your name and email address.
 
-![Image 04](docs/resources/images_userguide/image 04.png)
+![Image 04](resources/images_userguide/img04.png)
 
 Go to your inbox and find the email sent by BaseRock AI. Attn: Check the spam folder if it does not show up in the inbox.
 
-![Image 05](docs/resources/images_userguide/image 05.png)
+![Image 05](resources/images_userguide/img05.png)
 
 Click on the link under “Click here to confirm your email address”
 
 Go back to the BaseRock AI tab and click on REFRESH button
 
-![Image 06](docs/resources/images_userguide/image 06.png)
+![Image 06](resources/images_userguide/img06.png)
 
 You should be able to get into the BaseRock AI application.
 
 #### Invite Team members
 
-![Image 07](docs/resources/images_userguide/image 07.png)
+![Image 07](resources/images_userguide/img07.png)
 
 #### Setup LLM Provider
 
 BaseRock operates using the client’s LLM API key and offers broad support for leading providers such as Anthropic, OpenAI, and models available through Azure, Amazon Bedrock, and Google Vertex or directly the API key.
 
-![Image 08](docs/resources/images_userguide/image 08.png)
+![Image 08](resources/images_userguide/img08.png)
 
 #### Add Connector
 
@@ -140,19 +140,19 @@ BaseRock supports git connectors of Bitbucket (Cloud and Native) and Github (Clo
 
 The access is Read-only access for the source code following strict compliance as BaseRock is SOC-Type 2 certified.
 
-![Image 09](docs/resources/images_userguide/image 09.png)
+![Image 09](resources/images_userguide/img09.png)
 
 ## Service Onboarding
 
 ### Adding Service
 
-![Image 10](docs/resources/images_userguide/image 10.png)
+![Image 10](resources/images_userguide/img10.png)
 
 Adding a service in BaseRock allows users to discover all the available endpoints present in their respective micro-service.
 
 Click on the “Add Service” button on the top right corner to open the service creation form and provide the details.
 
-![Image 11](docs/resources/images_userguide/image 11.png)
+![Image 11](resources/images_userguide/img11.png)
 
 For monolithic repositories, users can create BaseRock services that logically represent a specific section of the monolith. Each service corresponds to one or more application modules into which the monolith has been structured, and should be named accordingly.
 
@@ -166,7 +166,7 @@ In the above screenshot “/module/v1” will discover all the endpoints that be
 
 ### Service Requirement Document
 
-![Image 12](docs/resources/images_userguide/image 12.png)
+![Image 12](resources/images_userguide/img12.png)
 
 Service requirement document is a document used by BaseRock to gather more context about the service under test.
 
@@ -207,7 +207,7 @@ Prompt given by user (optional)
 
 Test cases can be generated from 2 places - Within the business flow or Within the service
 
-![Image 13](docs/resources/images_userguide/image 13.png)
+![Image 13](resources/images_userguide/img13.png)
 
 When inside the business flow section and “use case” tab, after generating the use cases, users can click on 3 dots on top right and select “Map Use Cases To Test Cases” and BaseRock would generate test cases as well as map it to respective use cases. (We will see more about Use Cases in the upcoming section)
 
@@ -215,7 +215,7 @@ When inside the individual service user can click on 3 dots on the top right cor
 
 Final results would look like something as shown below
 
-![Image 14](docs/resources/images_userguide/image 14.png)
+![Image 14](resources/images_userguide/img14.png)
 
 ### Running Tests
 
@@ -225,7 +225,7 @@ A single test case to perform dry runs quickly for ensuring users are going in t
 
 > **NOTE: In order to run via UI user has to ensure that the BaseRock agent is actively running on the machine where they want the execution to take place.**
 
-![Image 15](docs/resources/images_userguide/image 15.png)
+![Image 15](resources/images_userguide/img15.png)
 
 Multi test runs like a smoke or regression or all tests of a single service - This can be achieved by configuring the run_tests.sh file according to the need and running it via CLI or CICD pipeline. Examples as shown in the section - Execute test suite
 
@@ -241,7 +241,7 @@ Perform special actions like capturing system date/time, generating a random str
 
 Playbooks is the most powerful feature of BaseRock when used properly and it enables users to be as creative as they want.
 
-![Image 16](docs/resources/images_userguide/image 16.png)
+![Image 16](resources/images_userguide/img16.png)
 
 In the above example screenshot:
 
@@ -269,7 +269,7 @@ Service Level Playbook
 
 Service level playbooks have the highest coverage i.e it works for the entire service. Any data or instruction that needs to be used again and again in multiple end points or test cases can be defined here which then automatically cascades, hence reducing the repeatability aspect.
 
-![Image 17](docs/resources/images_userguide/image 17.png)
+![Image 17](resources/images_userguide/img17.png)
 
 These playbooks take precedence over service level and if there are any instructions that need to override the service level but are required for all the test cases of that end point then it can be populated here.
 
@@ -291,7 +291,7 @@ Test Case Level Playbook
 
 When there are some specific test case level validations which might depend on the domain. Then those can be explicitly populated here by the product/domain expert.
 
-![Image 18](docs/resources/images_userguide/image 18.png)
+![Image 18](resources/images_userguide/img18.png)
 
 Detailed walkthrough of the BaseRock UI Portal.
 
@@ -311,7 +311,7 @@ This section allows user to generate use-cases out of the given PRD document and
 
 Services section consists of the list of services that BaseRock has learnt from source code.
 
-![Image 19](docs/resources/images_userguide/image 19.png)
+![Image 19](resources/images_userguide/img19.png)
 
 This is the page where you will be able to see all the services under test of your applications with an infinite scroll and corresponding versions in front.
 
@@ -319,7 +319,7 @@ In order to see more information about the services, you can either click on the
 
 Once you click on the name of the service, you will land on the following page shown below.
 
-![Image 20](docs/resources/images_userguide/image 20.png)
+![Image 20](resources/images_userguide/img20.png)
 
 There are 3 tabs within a particular service - Sources, Configurations and Endpoints.
 
@@ -327,7 +327,7 @@ Sources :
 
 It shows the way BaseRock has learnt about the service and the way you can feed more context to BaseRock via a requirement document.
 
-![Image 21](docs/resources/images_userguide/image 21.png)
+![Image 21](resources/images_userguide/img21.png)
 
 Another example of BaseRock’s learning via Github repository is shown above under the sources tab of the service.
 
@@ -335,7 +335,7 @@ Another example of BaseRock’s learning via Github repository is shown above un
 
 Users can maintain different versions of branches of the service to make sure the test cases generated for previous versions stay intact and do not get updated without approval.
 
-![Image 22](docs/resources/images_userguide/image 22.png)
+![Image 22](resources/images_userguide/img22.png)
 
 A versioning use case could be, The first time service is set up with a main branch and later a feature branch containing significant changes need to be tested but without making any changes in previous test cases generated for the main branch.
 
@@ -345,7 +345,7 @@ Configurations:
 
 The next tab is Configurations where a user can define additional context variables and their values (static or dynamic via instructions) to be used for performing any computations or providing actions via playbook.
 
-![Image 23](docs/resources/images_userguide/image 23.png)
+![Image 23](resources/images_userguide/img23.png)
 
 For example, you can create variables like for credentials for an authentication token that needs to be passed to the payload of the API request before sending it.
 
@@ -353,7 +353,7 @@ Open-Questions:
 
 Open questions is BaseRock’s intelligence to bridge the context gap between what it has learnt from the source code and the information missing in order to run the end to end flows.
 
-![Image 24](docs/resources/images_userguide/image 24.png)
+![Image 24](resources/images_userguide/img24.png)
 
 Open questions can be answered in a very simple and plain english to either provide answers or perform some actions and fetch the answers on runtime dynamically.
 
@@ -361,7 +361,7 @@ Endpoints:
 
 Third tab within the service is Endpoints, where all APIs, Kafka topics, etc will be shown as per the learning of BaseRock, shown in the images.
 
-![Image 25](docs/resources/images_userguide/image 25.png)
+![Image 25](resources/images_userguide/img25.png)
 
 Now each of the respective end points will be having their details, a suite of test scripts covering positive, negative and edge cases and execution results of the respective suite.
 
@@ -369,13 +369,13 @@ The 3 dots on the top right corner inside the Endpoints tab will give users opti
 
 This is the main step towards test case generation
 
-![Image 26](docs/resources/images_userguide/image 26.png)
+![Image 26](resources/images_userguide/img26.png)
 
 This allows users to add some more test cases according to their domain expertise and business specific requirements.
 
 Further inside an endpoint you can verify the schema of the same endpoint using which different flavours of payload and test cases will be generated.
 
-![Image 27](docs/resources/images_userguide/image 27.png)
+![Image 27](resources/images_userguide/img27.png)
 
 #### Test Suites:
 
@@ -383,11 +383,11 @@ This section is a consolidated section for all the test suites present in all th
 
 You can use filters to find the desired tests and customize the way you want the table to look like.
 
-![Image 28](docs/resources/images_userguide/image 28.png)
+![Image 28](resources/images_userguide/img28.png)
 
 #### Test Runs:
 
-![Image 29](docs/resources/images_userguide/image 29.png)
+![Image 29](resources/images_userguide/img29.png)
 
 You can filter and see the results based on your choice according to the type of test or which service it belongs to, etc.
 
@@ -405,7 +405,7 @@ Create service on BaseRock from locally available source code if not via git con
 
 BaseRock agent can be downloaded from the UI from the left panel. Once done make sure that the env is set (run set_env.sh) and the agent is whitelisted (run startup.sh)
 
-![Image 30](docs/resources/images_userguide/image 30.png)
+![Image 30](resources/images_userguide/img30.png)
 
 #### Execute single test case:
 
@@ -628,7 +628,7 @@ The user has generated and reviewed playbooks for the endpoints that entail setu
 
 The user has already generated and reviewed the specific test suite for POST /inventory endpoint that deals with the description as “Pet name must be of alphabetical characters”. By going into the test case details, one is able to capture the test case uuid (See 693964ce490c4e57327b54c5 in the screenshot below for the reference).
 
-![Image 31](docs/resources/images_userguide/image 31.png)
+![Image 31](resources/images_userguide/img31.png)
 
 The user has an instance of the petstore-backend service already running locally at http://localhost:8080 URL.
 
