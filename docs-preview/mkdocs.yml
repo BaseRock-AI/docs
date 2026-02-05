@@ -1,0 +1,8 @@
+site_name: BaseRock User Guide
+
+theme:
+  name: material
+
+nav:
+  - User Guide: User_Guide_v1.2.md
+

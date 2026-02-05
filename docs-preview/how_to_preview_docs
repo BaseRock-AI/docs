@@ -1,0 +1,3 @@
+run command "mkdocs serve" to open the .md file in HTML format to preview it.
+The .md file that will get opened can be configured using mkdocs.yml configuration
+And the .md file must be present in path "docs-preview/docs"
