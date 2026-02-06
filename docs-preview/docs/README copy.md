@@ -3,8 +3,8 @@
   <img src="resources/images_userguide/img01-BR_logo.png" alt="Image 01" width="800">
 </div>
 
-<h2 align="center">User Guide</h2>
-<p align="center"><b>Version 1.3</b></p>
+<h1 align="center">User Guide</h1>
+<p align="center"><b>Version 1.2</b></p>
 
 ## Table of Contents
 
@@ -107,13 +107,13 @@ Or you can use name and email address to login via email.
 
 You should be able to get into the BaseRock AI application.
 
-#### 2. Invite Team members
+#### Invite Team members
 
 <div align="center">
   <img src="resources/images_userguide/img07.png" alt="Image 07" width="800">
 </div>
 
-#### 3. Setup LLM Provider
+#### 2. Setup LLM Provider
 
 BaseRock operates using the client’s LLM API key and offers broad support for leading providers such as Anthropic, OpenAI, and models available through Azure, Amazon Bedrock, and Google Vertex or directly the API key.
 
@@ -121,12 +121,10 @@ BaseRock operates using the client’s LLM API key and offers broad support for 
   <img src="resources/images_userguide/img08.png" alt="Image 08" width="800">
 </div>
 
-#### 4. Add Connector
+#### 3. Add Connector
 
 BaseRock supports git connectors of Bitbucket (Cloud and Native) and Github (Cloud).
 The access is Read-only access for the source code following strict compliance as BaseRock is SOC-Type 2 certified.
-
-> **Note: For first time setup a repository admin needs to provide the approval**
 
 <div align="center">
   <img src="resources/images_userguide/img09.png" alt="Image 09" width="800">
@@ -395,51 +393,17 @@ You can use filters to find the desired tests and customize the way you want the
 
 ### Test Runs:
 
-This section stores all the test results belonging to any service or suite.
-The following table contains all the "Test Runs", further when you go inside a test run, you should see all the test cases that were executed in it.
-The status of a test run will be failed even if a single test case fails inside it.
-You can filter and see the results based on your choice according to the type of test or which service it belongs to, etc.
-
-<div align="center">
-  <img src="resources/images_userguide/img33.png" alt="Image 33" width="800">
-</div>
-
-below are the "Test Case Runs" inside a particular test run
-
 <div align="center">
   <img src="resources/images_userguide/img29.png" alt="Image 29" width="800">
 </div>
 
-
+You can filter and see the results based on your choice according to the type of test or which service it belongs to, etc.
 
 ### Connectors:
 
-With the help of connectors BaseRock is able to connect with the git using which it learns from the source code (read-only)
-
-Check the section for more details on how to use connectors: [Add Connector](#4-add-connector)
-
 ### Test profiles:
 
-Test profiles are a way for you user to store environment settings that can be changed while running test cases. 
-For example, UAT environment will have a different configurations than Pre-production.
-
-<div align="center">
-  <img src="resources/images_userguide/img32.png" alt="Image 32" width="800">
-</div>
-
 ### Access management:
-
-there will be two sets of users in BaseRock:
-- Administrators - Who can add service acounts and modify LLM keys in-use
-- Users - Regular users of BaseRock having all access execpt the above mentioned.
-
-Check the section to know how to add a team member to BaseRock: [Invite Team members](#2-invite-team-members)
-
-### Settings:
-
-Settings allow Administrators to add the LLM provider to BaseRock without any external help and get started.
-
-Check the section to know how to [Setup LLM Provider](#3-setup-llm-provider)
 
 ## BaseRock Agent Usage
 
