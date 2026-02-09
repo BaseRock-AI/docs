@@ -4,7 +4,7 @@
 </div>
 
 <h2 align="center">User Guide</h2>
-<p align="center"><b>Version 1.3</b></p>
+<p align="center">Version 1.4</p>
 
 ## Table of Contents
 
@@ -88,7 +88,7 @@ Or you can use name and email address to login via email.
 - Enter your name and email address.
 
 <div align="center">
-  <img src="resources/images_userguide/img04.png" alt="Image 04" width="500">
+  <img src="resources/images_userguide/img04.png" alt="Image 04" width="350">
 </div>
 
 - Go to your inbox and find the email sent by BaseRock AI. Attn: Check the spam folder if it does not show up in the inbox.
@@ -98,14 +98,13 @@ Or you can use name and email address to login via email.
 </div>
 
 - Click on the link under “Click here to confirm your email address”
-
 - Go back to the BaseRock AI tab and click on REFRESH button
 
 <div align="center">
-  <img src="resources/images_userguide/img06.png" alt="Image 06" width="500">
+  <img src="resources/images_userguide/img06.png" alt="Image 06" width="350">
 </div>
 
-You should be able to get into the BaseRock AI application.
+You should be able to get into the BaseRock AI application now.
 
 #### 2. Invite Team members
 
@@ -134,7 +133,7 @@ The access is Read-only access for the source code following strict compliance a
 
 ## Quick Start
 
-### Add a Service
+### 1. Add a Service
 
 <div align="center">
   <img src="resources/images_userguide/img10.png" alt="Image 10" width="800">
@@ -186,7 +185,7 @@ A sample data in the document might look like this:
   - All requests for new TODO list items and their corresponding email notifications must be audited for tracking and compliance purposes.
   ```
 
-### Create Test Cases
+### 2. Create Test Cases
 
 The test cases depend on:
 1. Source code read from repository
@@ -196,7 +195,7 @@ The test cases depend on:
 Test cases can be generated from 2 places - within the business flow or within the above created service
 
 <div align="center">
-  <img src="resources/images_userguide/img13.png" alt="Image 13" width="800">
+  <img src="resources/images_userguide/img13.png" alt="Image 13" width="700">
 </div>
 
 When inside the individual service user can click on 3 dots on the top right corner and click “Generate Test Cases a window will be shown as above where the user can either provide a prompt for adding domain specific instructions or simply click on generate to generate an optimized number of test cases based on source code.
@@ -209,14 +208,14 @@ Final results would look like something as shown below:
   <img src="resources/images_userguide/img14.png" alt="Image 14" width="800">
 </div>
 
-### Generate Playbooks
+### 3. Generate Playbooks
 
-To get detailed understanding of playbooks refer to the next [section](#playbooks)
+To get detailed understanding of playbooks refer to the next [section](#understanding-playbooks)
 For now, 
 - Go to [configurations](#configurations) tab inside the service and fill it as per the need. For example if API requires authentication then make sure it is setup in configurations tab before proceeding.
 - Click on 3 dots inside the endpoint tab and select Generate Playbooks. You should after some time see the endpoint-level playbooks populated. (don't worry, you can learn about the playbook hierarchy later [here](#playbooks-hierarchy)) 
 
-### Running Tests
+### 4. Running Tests
 
 Tests can be executed in 2 different ways:
 - A single test case to perform dry runs quickly for ensuring users are going in the right direction.
@@ -269,7 +268,7 @@ Playbooks are a medium to communicate with BaseRock AI via english prompts. Thes
 Service level playbooks have the highest coverage i.e it works for the entire service. Any data or instruction that needs to be used again and again in multiple end points or test cases can be defined here which then automatically cascades, hence reducing the repeatability aspect.
 
 <div align="center">
-  <img src="resources/images_userguide/img17.png" alt="Image 17" width="800">
+  <img src="resources/images_userguide/img17.png" alt="Image 17" width="600">
 </div>
 
 - Endpoint Level Playbook:
@@ -289,17 +288,19 @@ Additionally, if the username (or any variable) is dynamically generated (ex: ra
 
 When there are some specific test case level validations which might depend on the domain. Then those can be explicitly populated here by the product/domain expert.
 
+Check section: [Playbook Usage](#playbooks-usage) to understand the best practices and some examples.
+
 <!-- ![Image 18](resources/images_userguide/img18.png) -->
 
 ## BaseRock Platform Walkthrough
 
 The side bar panel on the left can be used to navigate to different sections of BaseRock portal that provides access to all the functionalities.
 
-### Business Flows
+### Business Flows:
 
 This section allows user to generate use-cases out of the given PRD document and map the corresponding AI generated test scripts to create a Requirement Traceability Matrix
 
-### Services
+### Services:
 
 Services section consists of the list of services that BaseRock has learnt from source code.
 
@@ -341,7 +342,8 @@ Another example of BaseRock’s learning via Github repository is shown above un
 
 ##### Configurations:
 
-The next tab is Configurations where a user can define additional context variables and their values (static or dynamic via instructions) to be used for performing any computations or providing actions via playbook.
+The next tab is Configurations where a user can define additional context variables and their values (static or dynamic via instructions) to be used for performing any computations or providing actions via playbook. 
+Check section: [Best practices](#context-variables) for using variables in BaseRock.
 
 <div align="center">
   <img src="resources/images_userguide/img23.png" alt="Image 23" width="800">
@@ -378,6 +380,8 @@ This is the main step towards test case generation
 
 The prompt area while generating test cases allows user to add their domain expertise and business specific validations to the test cases.
 
+Check section: [Test Case Generate](#test-case-generation) to learn how to leverage prompts to generate quality and desirable test cases.
+
 Further inside an endpoint you can verify the schema of the same endpoint using which different flavours of payload and test cases will be generated.
 
 <div align="center">
@@ -409,8 +413,6 @@ below are the "Test Case Runs" inside a particular test run
 <div align="center">
   <img src="resources/images_userguide/img29.png" alt="Image 29" width="800">
 </div>
-
-
 
 ### Connectors:
 
@@ -469,19 +471,19 @@ In order to activate agent, run the file *start_baserock_daemon.sh* from the bas
 In order to run multiple tests, the user has to first configure the suite file (named as *run_tests.sh*) inside BaseRock agent folder and then execute it.
 
 Configurations are as below:
-```bash
-./baserock_agent --run-tests \
---service="service_ABC" \
---env="staging123" \
---service-url="https://app.dev.yourCompany.com/" \
---protocol="rest,graphql,kafka" \
---test-case-id="TC-1,TC-2" \
---tags="regression"\
---category="HAPPY_TEST_CASES or NEGATIVE_TEST_CASES" \
---endpoints="/user/auth,/temp/job,/user/jobs" \
---version="2025.12.11.978" \
---method="GET,POST,PUT,DELETE,PATCH"
-```
+  ```bash
+  ./baserock_agent --run-tests \
+  --service="service_ABC" \
+  --env="staging123" \
+  --service-url="https://app.dev.yourCompany.com/" \
+  --protocol="rest,graphql,kafka" \
+  --test-case-id="TC-1,TC-2" \
+  --tags="regression"\
+  --category="HAPPY_TEST_CASES or NEGATIVE_TEST_CASES" \
+  --endpoints="/user/auth,/temp/job,/user/jobs" \
+  --version="2025.12.11.978" \
+  --method="GET,POST,PUT,DELETE,PATCH"
+  ```
 
 Where,
 - Service is the name of the service inside baserock in which the test cases are present (Mandatory).
@@ -503,13 +505,13 @@ This option allows users to add a specific version of a service on BaseRock dire
 
 Run the file add_service.sh after configuring the following inside this file.
 
-```bash
-./baserock_agent --add-service \
---service=<service-name> \
---tech-stack=<tech-stack> \
---integration-type=<Integration-type> \
---local-src-path=<local-src-path>
-```
+  ```bash
+  ./baserock_agent --add-service \
+  --service=<service-name> \
+  --tech-stack=<tech-stack> \
+  --integration-type=<Integration-type> \
+  --local-src-path=<local-src-path>
+  ```
 
 Here,
 - Service is the name of the service you want to store it as and it will reflect on BaseRock UI
@@ -531,111 +533,159 @@ Either directly use the command line or use *run_tests.sh* to create multiple .s
   --protocol="rest" \
   --tags="smoke"
   ```
+
 **Below are some more examples of other configurations with a petstore scenario**
 
 1. Run All test cases of “petstore-backend” service against a QA environment, where the service is hosted at https://qa.example.app/petstore-backend.
 
-**Prerequisites:**
-- User has access to the BaseRock control plane (By default it’s https://app.baserock.ai)
-- The user has already onboarded a service named as “petstore-backend” resulting in discovery of many endpoints.
-- The user has generated and reviewed playbooks for the endpoints that entail setup, test and teardown steps.
-- The user has already generated and reviewed test suites for some of the endpoints.
-- The user has an instance of the petstore-backend service already running successfully at https://qa.example.app/petstore-backend URL.
+  **Prerequisites:**
+  - User has access to the BaseRock control plane (By default it’s https://app.baserock.ai)
+  - The user has already onboarded a service named as “petstore-backend” resulting in discovery of many endpoints.
+  - The user has generated and reviewed playbooks for the endpoints that entail setup, test and teardown steps.
+  - The user has already generated and reviewed test suites for some of the endpoints.
+  - The user has an instance of the petstore-backend service already running successfully at https://qa.example.app/petstore-backend URL.
 
-**Command Line:**
-```bash
-./baserock_agent --run-tests \
---service=petstore-backend \
---env=QA \
---service-url=https://qa.example.app/petstore-backend
-```
+  **Command Line:**
+  ```bash
+  ./baserock_agent --run-tests \
+  --service=petstore-backend \
+  --env=QA \
+  --service-url=https://qa.example.app/petstore-backend
+  ```
 
 2. Run All positive test cases of “petstore-backend” service against a Localhost environment, where the service is hosted at http://localhost:8080
 
-**Prerequisites:**
-- User has access to the BaseRock control plane (By default it’s https://app.baserock.ai)
-- The user has already onboarded a service named as “petstore-backend” resulting in discovery of many endpoints.
-- The user has generated and reviewed playbooks for the endpoints that entail setup, test and teardown steps.
-- The user has already generated and reviewed test cases for some of the endpoints.
-- The user has an instance of the petstore-backend service already running successfully at https://qa.example.app/petstore-backend URL.
+  **Prerequisites:**
+  - User has access to the BaseRock control plane (By default it’s https://app.baserock.ai)
+  - The user has already onboarded a service named as “petstore-backend” resulting in discovery of many endpoints.
+  - The user has generated and reviewed playbooks for the endpoints that entail setup, test and teardown steps.
+  - The user has already generated and reviewed test cases for some of the endpoints.
+  - The user has an instance of the petstore-backend service already running successfully at https://qa.example.app/petstore-backend URL.
 
-**Command Line:**
-```bash
-./baserock_agent --run-tests \
---service=petstore-backend \
---env=QA \
---service-url=http://localhost:8080 \
---category=HAPPY_TEST_CASE
-```
+  **Command Line:**
+  ```bash
+  ./baserock_agent --run-tests \
+  --service=petstore-backend \
+  --env=QA \
+  --service-url=http://localhost:8080 \
+  --category=HAPPY_TEST_CASE
+  ```
 
-> **Note: category is specified as an additional filter.**
+  > **Note: category is specified as an additional filter.**
 
 3. Run test cases of specific set of endpoints - /inventory and /owners “ petstore-backend” service against a Localhost environment, where the service is hosted at http://localhost:8080
 
-**Prerequisites:**
--  has access to the BaseRock control plane (By default it’s https://app.baserock.ai)
-- The user has already onboarded a service named as “petstore-backend” resulting in discovery of many endpoints.
-- The user has generated and reviewed playbooks for the endpoints that entail setup, test and teardown steps.
-- The user has already generated and reviewed test cases for /inventory and /owners endpoints.
-- The user has an instance of the petstore-backend service already running locally at http://localhost:8080 URL.
+  **Prerequisites:**
+  -  has access to the BaseRock control plane (By default it’s https://app.baserock.ai)
+  - The user has already onboarded a service named as “petstore-backend” resulting in discovery of many endpoints.
+  - The user has generated and reviewed playbooks for the endpoints that entail setup, test and teardown steps.
+  - The user has already generated and reviewed test cases for /inventory and /owners endpoints.
+  - The user has an instance of the petstore-backend service already running locally at http://localhost:8080 URL.
 
-**Command Line:**
-```bash
-./baserock_agent --run-tests \
---service=petstore-backend \
---env=QA \
---service-url=http://localhost:8080 \
---endpoint=/inventory,/owner
-```
+  **Command Line:**
+  ```bash
+  ./baserock_agent --run-tests \
+  --service=petstore-backend \
+  --env=QA \
+  --service-url=http://localhost:8080 \
+  --endpoint=/inventory,/owner
+  ```
 
-> **Note: endpoint addresses are specified as an additional filter with comma delimiter.**
+  > **Note: endpoint addresses are specified as an additional filter with comma delimiter.**
 
 4. Run test cases of specific method (“POST”) of a specific endpoint (“/inventory”) for “petstore-backend” service against a Localhost environment, where the service is hosted at http://localhost:8080
 
-**Prerequisites:**
-- User has access to the BaseRock control plane (By default it’s https://app.baserock.ai)
-- The user has already onboarded a service named as “petstore-backend” resulting in discovery of many endpoints.
-- The user has generated and reviewed playbooks for the endpoints that entail setup, test and teardown steps.
-- The user has already generated and reviewed test suites for POST /inventory endpoint.
-- The user has an instance of the petstore-backend service already running locally at http://localhost:8080 URL.
+  **Prerequisites:**
+  - User has access to the BaseRock control plane (By default it’s https://app.baserock.ai)
+  - The user has already onboarded a service named as “petstore-backend” resulting in discovery of many endpoints.
+  - The user has generated and reviewed playbooks for the endpoints that entail setup, test and teardown steps.
+  - The user has already generated and reviewed test suites for POST /inventory endpoint.
+  - The user has an instance of the petstore-backend service already running locally at http://localhost:8080 URL.
 
-**Command Line:**
-```bash
-./baserock_agent --run-tests \
---service=petstore-backend \
---env=QA \
---service-url=http://localhost:8080 \
---endpoint=/inventory \
---method=POST
-```
+  **Command Line:**
+  ```bash
+  ./baserock_agent --run-tests \
+  --service=petstore-backend \
+  --env=QA \
+  --service-url=http://localhost:8080 \
+  --endpoint=/inventory \
+  --method=POST
+  ```
+  > **Note: endpoint addresses and method are specified as additional filters.**
 
-> **Note: endpoint addresses and method are specified as additional filters.**
+## Best Practices
 
-5. Run a very specific test case (Pet name must be of alphabetical characters) of specific method (“POST”) of a specific endpoint (“/inventory”) for “petstore-backend” service against a Localhost environment, where the service is hosted at http://localhost:8080
+### Context variables
 
-**Prerequisites:**
-- User has access to the BaseRock control plane (By default it’s https://app.baserock.ai)
-- The user has already onboarded a service named as “petstore-backend” resulting in discovery of many endpoints.
-- The user has generated and reviewed playbooks for the endpoints that entail setup, test and teardown steps.
-- The user has already generated and reviewed the specific test cases for POST /inventory endpoint that deals with the description as “Pet name must be of alphabetical characters”. By going into the test case details, one is able to capture the test case uuid (See 693964ce490c4e57327b54c5 in the screenshot below for the reference).
+1. Always try to create context variables in camel case, although it's not mandatory but following any one standard of writing variable reduces chances of mistakes while referring later on.
+2. Refer to context variables with ```${}``` syntax, for ex: ```${variableName}``` everywhere throughout BaseRock whenever user wants to use the value of that variable or want to write anything back to variable.
 
-<div align="center">
-  <img src="resources/images_userguide/img31.png" alt="Image 31" width="800">
-</div>
+### Test case generation
 
-The user has an instance of the petstore-backend service already running locally at http://localhost:8080 URL.
+1. Users should always try to have a very clear vision on what type of tests they expect out of BaseRock. It's always better to jot down the expectations somewhere to refer while working with BaseRock.
+2. Try to always have the following items documented: functional requirement, API details, Request-Response examples, validation rules, business use cases, existing test scenarios or test cases (if any). 
+The reason is that these informations make BaseRock context-rich eventually generating top-class high quality test cases.
+But remember, these informations are not mandatory for you to use BaseRock to achieve testing goals.
+3. Write prompts that are specific to your tetsing goals while generating test cases. You can mix the below examples in just one prompt if needed.
+Examples:
+  - If you are looking for more of security and I18N test cases along with regular coverage then write
+  ```
+  1- Along with standard coverage generate security test cases following OWASP rules and also Internationalisation test cases for the languages Arabic, French, German and Hindi.
+  2- Do not create positive test cases for security, only negativ.
+  3- Do not create more than 3 test cases for each language during I18N test.
+  4- Make sure to involve tests that include PII data in the payload
+  ```
 
-**Command Line:**
-```bash
-./baserock_agent --run-tests \
---service=petstore-backend \
---env=QA \
---service-url=http://localhost:8080 \
---test-case-uuid=693964ce490c4e57327b54c5
---test-case-id=SVC-1, SVC-2
-```
+  - If you have a quantity criteria then mention the number of test cases to be generated.
+  ```
+  Generate only 1 test case for GET methods.
+  Generate not more than 5 edge cases for the DELETE method APIs
+  ```
 
-> **Note: test-case-uuid are specified as additional filters with comma delimiter for multiple test case uuids.**
+  - You can give negative prompts too.
+  ```
+  Ensure none of the test cases have similar payload and ensure there is no duplicacy.
+  Make sure test cases do not focus on option payload fields.
+  Don't generate non-functional test cases for POST method
+  ```
+
+- Do not write any vague prompts like: "Create good quality test cases". In such cases it's better to leave the prompt area empty and just click Generate button.
+
+### Playbooks usage
+
+1. Make sure to have a mental diagram or flow written to know what is required to run an API before you jump inside BaseRock and start automation. 
+Like, authentication, specific payload values that are always fixed, generation of any random value before every run, etc.
+2. Any pre-condition which is common for all endpoints MUST be written in the service level playbook and it should not be written inside endpoint level playbook.
+3. After the playbooks are saved, always check the AI workflows (aka AI adaption) of the respective endpoint and also on test case level to be sure of the sequence of steps that will execute before, during and after the test.
+4. While generating playbooks try to visualise the type of configurations, validations and post-test instructions you would want and mention in the prompt area before clicking on generate playbooks.
+Example:
+  - validation instructions can be written as:
+  ```
+  Validate that every successful response contains a message "successfully sent" for all POST endpoints of /user/form router.
+  ```
+
+  - Looping of instruction steps can be done like this, where instructions can be even sending external API request during runtime:
+  ```
+  LOOP every 5 seconds up to 30 seconds until it succeeds
+  GET /file/download/${{fileID}} with headers 
+  --header 'X-QWERT-UUID: 822ccd6c-ee85-47c7-8081-ab89ad896e6c' 
+  Verify 200 response code
+  Verify response contains data.userid.value
+  END LOOP
+  ```
+
+  - Dynamic value generations like random text or system date can be done like this:
+  ```
+  1. Generate random email id follwoing this pattern: name_role@gmail.com and store in variable testEmail.
+  2. Store system date in variable sysDate once the test execution is over and pass it on to Teardown step.
+  ```
+
+### Test suite and test run
+
+1. Always create and keep mulitple flavours of ```run_test_suite.sh``` files with different configurations and re-name the file based on it. 
+For ex:
+  ```run_fullRegression.sh, run_serviceA_sanity.sh, run_onlyHappyFlows.sh, run_onlyPUTmethods.sh, run_POST_auth_endpoint.sh```
+2. When playbooks and test cases are generated, always try executing some test cases individually first from UI before running full suite. Check [Execute Single Test Case](#execute-single-test-case)
 
 ## Appendix
 
